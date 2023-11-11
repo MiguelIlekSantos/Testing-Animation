@@ -15,22 +15,237 @@ body{
     width: 100%;
     height: 100%;
     background-color: #000;
+    background-image: linear-gradient(black, #130c35, #1a0429, #130c35,black);
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 }
 
 .stars-content{
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid blue;
+    position: relative;
 }
 
 .star{
-    top: 50%;
-    left: 50%;
     width: 2px;
     height: 2px;
     position: absolute;
     background-color: var(--color-one);
     border-radius: 50%;
     box-shadow: 0px 0px 20px 4px var(--color-one);
+    perspective: 100px;
+    opacity: 0;
 }
+
+.star-move-one{
+    animation: star-move-one 15s linear infinite;
+}
+.star-move-two{
+    animation: star-move-two 15s linear infinite;
+}
+.star-move-three{
+    animation: star-move-three 15s linear infinite;
+}
+.star-move-four{
+    animation: star-move-four 15s linear infinite;
+}
+.star-move-five{
+    animation: star-move-five 15s linear infinite;
+}
+.star-move-six{
+    animation: star-move-six 15s linear infinite;
+}
+.star-move-seven{
+    animation: star-move-seven 15s linear infinite;
+}
+.star-move-eight{
+    animation: star-move-eight 15s linear infinite;
+}
+.star-move-nine{
+    animation: star-move-nine 15s linear infinite;
+}
+.star-move-ten{
+    animation: star-move-ten 15s linear infinite;
+}
+.star-move-eleven{
+    animation: star-move-eleven 15s linear infinite;
+}
+.star-move-twelve{
+    animation: star-move-twelve 15s linear infinite;
+}
+
+
+
+
+
+
+
+@keyframes star-move-one {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(2000%, 50000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para direita e para baixo  */
+}
+@keyframes star-move-two {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(2000%, -50000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para direita e para cima */
+}
+@keyframes star-move-three {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-2000%, 50000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para esquerda e para baixo  */
+}
+@keyframes star-move-four {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-2000%, -50000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para esquerda e para cima  */
+}
+@keyframes star-move-five {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-2000%, -25000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para esquerda e SEMI-cima */
+}
+@keyframes star-move-six {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-2000%, 25000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para esquerda e SEMI-baixo */
+}
+@keyframes star-move-seven {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(2000%, -25000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para direita e SEMI-cima */
+}
+@keyframes star-move-eight {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(2000%, 25000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para direita e SEMI-baixo */
+}
+@keyframes star-move-nine {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-1000%, -50000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para cima e SEMI-esquerda*/
+}
+@keyframes star-move-ten {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(1000%, -50000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para cima e SEMI-direita*/
+}
+@keyframes star-move-eleven {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(-20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-1000%, 50000%) rotateZ(-20deg);
+        width: 500px;
+    }
+    /* Para baixo e SEMI-esquerda*/
+}
+@keyframes star-move-twelve {
+    0%{
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(20deg);
+        width: 50px;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(1000%, 50000%) rotateZ(20deg);
+        width: 500px;
+    }
+    /* Para baixo e SEMI-direita*/
+}
+
+
+
+
+
+
+
