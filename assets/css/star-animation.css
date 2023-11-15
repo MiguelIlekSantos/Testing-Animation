@@ -1,5 +1,6 @@
 :root {
     --color-one: white;
+    --time-animation: 15s;
 }
 
 * {
@@ -30,12 +31,12 @@ body {
     height: 500px;
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 .stars-content div {
-    width: 125px;
+    width: 100px;
     position: relative;
 }
 
@@ -54,54 +55,72 @@ body {
 
 .one .star,
 .sixteen .star {
-    animation: star-move-one 15s linear infinite;
+    animation: star-move-one var(--time-animation) linear infinite;
 }
 
 .two .star,
 .fourteen .star {
-    animation: star-move-two 15s linear infinite;
+    animation: star-move-two var(--time-animation) linear infinite;
 }
 
 .three .star,
 .fifteen .star {
-    animation: star-move-three 15s linear infinite;
+    animation: star-move-three var(--time-animation) linear infinite;
 }
 
 .four .star,
 .thirteen .star {
-    animation: star-move-four 15s linear infinite;
+    animation: star-move-four var(--time-animation) linear infinite;
 }
 
 .five .star {
-    animation: star-move-five 15s linear infinite;
+    animation: star-move-five var(--time-animation) linear infinite;
 }
 
 .six .star {
-    animation: star-move-six 15s linear infinite;
+    animation: star-move-six var(--time-animation) linear infinite;
 }
 
 .seven .star {
-    animation: star-move-seven 15s linear infinite;
+    animation: star-move-seven var(--time-animation) linear infinite;
 }
 
 .eight .star {
-    animation: star-move-eight 15s linear infinite;
+    animation: star-move-eight var(--time-animation) linear infinite;
 }
 
 .nine .star {
-    animation: star-move-nine 15s linear infinite;
+    animation: star-move-nine var(--time-animation) linear infinite;
 }
 
 .ten .star {
-    animation: star-move-ten 15s linear infinite;
+    animation: star-move-ten var(--time-animation) linear infinite;
 }
 
 .eleven .star {
-    animation: star-move-eleven 15s linear infinite;
+    animation: star-move-eleven var(--time-animation) linear infinite;
 }
 
 .twelve .star {
-    animation: star-move-twelve 15s linear infinite;
+    animation: star-move-twelve var(--time-animation) linear infinite;
+}
+
+.seventeen .star,
+.twenty-one .star {
+    animation: star-move-seventeen var(--time-animation) linear infinite;
+}
+
+.eighteen .star{
+    animation: star-move-eighteen var(--time-animation) linear infinite;
+}
+
+.nineteen .star,
+.twenty-three .star {
+    animation: star-move-nineteen var(--time-animation) linear infinite;
+}
+
+.twenty .star{
+    animation: star-move-twenty var(--time-animation) linear infinite;
 }
 
 
@@ -296,4 +315,68 @@ body {
     }
 
     /* Para baixo e SEMI-direita*/
+}
+
+@keyframes star-move-seventeen {
+    0% {
+        opacity: 0;
+        transform: translate(0%);
+        width: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-2000%);
+        width: 500px;
+    }
+
+    /* Para esquerda*/
+}
+
+@keyframes star-move-eighteen {
+    0% {
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(90deg);
+        width: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-70%,-50000%) rotateZ(90deg);
+        width: 500px;
+    }
+
+    /* Para cima*/
+}
+
+@keyframes star-move-nineteen {
+    0% {
+        opacity: 0;
+        transform: translate(0%);
+        width: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(2000%);
+        width: 500px;
+    }
+
+    /* Para direita*/
+}
+
+@keyframes star-move-twenty {
+    0% {
+        opacity: 0;
+        transform: translate(0%, 0%) rotateZ(90deg);
+        width: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-70%,50000%) rotateZ(90deg);
+        width: 500px;
+    }
+
+    /* Para baixo*/
 }
